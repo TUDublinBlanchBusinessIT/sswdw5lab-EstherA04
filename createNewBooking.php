@@ -11,13 +11,13 @@ $sql = "INSERT INTO booking (memberid, courtid, bookingDate, starttime, endtime)
 
 echo $sql; // Display the SQL statement for debugging purposes
 
-/*
+
 if (mysqli_query($conn, $sql)) {
   echo "<br>New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-*/
+
 
 mysqli_close($conn); 
 ?>
