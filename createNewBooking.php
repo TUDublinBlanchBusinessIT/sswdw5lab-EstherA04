@@ -1,4 +1,5 @@
 <?php 
+include("dbcon.php");
 
 $mid = $_POST['memberID']; 
 $cid = $_POST['courtID']; 
@@ -6,11 +7,10 @@ $bd = $_POST['bookingDate'];
 $st = $_POST['startTime']; 
 $et = $_POST['endTime']; 
 
-include("dbcon.php");
+$sql = "INSERT INTO booking (memberid, courtid, bookingDate, starttime, endtime) VALUES ('$mid', '$cid', '$bd', '$st', '$et')";
 
-$sql = "insert into booking(memberid,courtid,bookingDate,starttime,endtime) values ('$mid','$cid','$bd','$st','$et')";
+echo $sql; // Display the SQL statement for debugging purposes
 
-echo $sql;
 /*
 if (mysqli_query($conn, $sql)) {
   echo "<br>New record created successfully";
